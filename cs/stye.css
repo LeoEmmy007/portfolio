@@ -6,7 +6,7 @@
 
 body {
   line-height: 1.6;
-  background-color: #b6ca63;
+  background-color: #fefcff;
   font-family: "roboto";
   overflow-x: hidden;
   font-weight: lighter;
@@ -15,7 +15,7 @@ body {
 .header-section .menu-container {
   display: flex;
   margin-left: 30px;
-  background-color: rgba(202, 182, 182, 0.966);
+  background-color: rgba(255, 255, 255, 0.849);
   position: fixed;
   z-index: 1000;
   width: 100%;
