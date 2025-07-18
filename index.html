@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>personal portfolio</title>
+    <link rel="stylesheet" href="cs/stye.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      --
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <!-- header-section start here -->
+    <div class="header-section">
+      <div class="menu-container">
+        <h1>
+          <div class="logo">LEO<span>nardo</span></div>
+        </h1>
+         
+        <div class="nav-bar">
+         <div class="nav-menu">
+           <ul class="nav-links">
+            <li><a href="#" class="active" onclick="showHome()">HOME  </a>
+            <!-- <ul class="dropdown-menu">
+           <li><a href="#" onclick="setLightMode()">LIGHT VERSION</a></li>
+           <li><a href="#" onclick="setDarkMode()">DARK VERSION</a></li>
+            </ul> -->
+            
+            
+            <li><a href="#" onclick="showAbout();">ABOUT</a></li>
+            <li><a href="#" onclick="showService();">SERVICES</a></li>
+            <li><a href="#" onclick="showResume();">RESUME</a></li>
+            <li><a href="#"onclick="showProject();" >PROJECT</a></li>
+            <li><a href="#" onclick="showFaq();">FAQ</a></li>
+            <li><a href="#" onclick="showContact();">CONTACT</a></li>
+           </ul>
+           
+          </div>
+             <nav class="nav-link">
+             <ul>
+               <li>
+                <a href="facebook.com/David Leo'Emmy" target="_blank"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="twitter.com/leo'DavidEmmy" target="_blank"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="instagram.com/emmydavid007" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              <li>
+                  <a href="thread.com/David Leo'Emmy" target="_blank"
+               ><i class="fa-brands fa-square-threads"></i
+               ></a>
+
+                </li>
+              </li>
+              </ul>
+            </nav>
+         <!-- hambuger menu-icon -->
+         <div class="hamburger-menu" onclick="togglebar()">
+             <i class="fa-solid fa-bars-staggered"></i>
+          </div>
+
+           <!-- end hambuger menu-icon -->
+        </div>
+      </div>
+    </div>
+    <!-- header-section ends here -->
+
+    <!-- hero-section start here -->
+    <div class="hero-section" >
+      <div class="title-box">
+        <div class="main-title">
+         <p>
+           HELLO ! <br />
+          THIS IS <br />LEONARDO
+         </p>
+        </div>
+        <div class="subtitle-wrapper">
+          <div class="subtitle">MODELING</div>
+          <div class="subtitle">WEB DEVELOPER</div>
+        </div>
+        <div class="vd">
+          <button class="btn">
+            DOWNLOAD CV
+            <i class="fa-solid fa-download"></i>
+          </button>
+
+          <div class="vtn">
+            <i class="fa-solid fa-play"></i>
+            <h4>VIDEO TOUR</h4>
+          </div>
+        </div>
+      </div>
+      <div class="pic-box">
+        <div class="a"></div>
+        <div class="p">
+          <img src="images/leo.jpg" alt="sample" />
+        </div>
+      </div>
+    </div>
+    <!-- hero-section ends here -->
+
+    <!-- about-section start here -->
+    <div class="about-section " id="About">
+      <div class="head">
+        <h5>PROFILE</h5>
+        <h1>AT A GLANCE</h1>
+      </div>
+      <div class="about-container">
+        <div class="skills-section">
+          <div class="bubble wp">
+            <img src="images/python-removebg-preview.png" alt="" />
+          </div>
+          <div class="bubble html">HTML</div>
+          <div class="bubble c">C++</div>
+          <div class="bubble xd">JS</div>
+        </div>
+        <div class="me">
+          <h5>ABOUT ME</h5>
+          <h2>
+            PERSONAL AND DEDICATED FREELANCER <br />
+            LIVES IN ONDO STATE NIGERIA
+          </h2>
+          <p>
+            As a vibrant individual born on August 28, i bring a spark of energy
+            and enthusiasm to everything i do. Hailing from the historic city of
+            Ondo in Ondo State, Nigeria, we are rooted in a rich cultural
+            heritage that values tradition, community, and hard work. My
+            birthdate, nestled in the heart of summer, signifies a personality
+            that is warm, optimistic, and radiant. People born in August are
+            known for their confidence, creativity, and natural leadership
+            abilities, and an likely embody these traits in my own unique way.
+          </p>
+        </div>
+      </div>
+      <!-- about section ends here -->
+
+      <!-- about-work start here -->
+      <div class="about-work" id="Service">
+        <div class="hd">
+          <h5>SERVICES</h5>
+          <h1>WHAT I'M DOING</h1>
+        </div>
+        <div class="blok-container">
+          <nav class="block lnk">
+            <i class="fa-solid fa-pen-nib"></i> <br />
+            <h3>UL/UX DESIGN</h3>
+
+            <p>
+              its a long established fact <br />
+              &nbsp; &nbsp; &nbsp; that readers will be <br />
+              &nbsp; &nbsp; &nbsp;distracted readable <br />
+              &nbsp; content of a page when.
+            </p>
+            <div class="order">
+              <button type="submit">PLACE ORDER</button>
+            </div>
+          </nav>
+          <nav class="block pot">
+            <i class="fa-solid fa-box"></i> <br />
+            <h3>ADVERTISING</h3>
+
+            <p>
+              its a long established fact <br />
+              &nbsp; &nbsp; &nbsp; that readers will be <br />
+              &nbsp; &nbsp; &nbsp;distracted readable <br />
+              &nbsp; content of a page when.
+            </p>
+            <div class="order">
+              <button type="submit">PLACE ORDER</button>
+            </div>
+          </nav>
+          <nav class="block fin">
+            <i class="fa-solid fa-truck-moving"></i> <br />
+            <h3>MARKETING</h3>
+
+            <p>
+              its a long established fact <br />
+              &nbsp; &nbsp; &nbsp; that readers will be <br />
+              &nbsp; &nbsp; &nbsp;distracted readable <br />
+              &nbsp; content of a page when.
+            </p>
+            <div class="order">
+              <button type="submit">PLACE ORDER</button>
+            </div>
+          </nav>
+          <nav class="block jit">
+            <i
+              class="fa-solid fa-link fa-rotate-by"
+              style="--fa-rotate-angle: 35deg"
+            ></i>
+            <br />
+            <h3>BRANDING</h3>
+
+            <p>
+              its a long established fact <br />
+              &nbsp; &nbsp; &nbsp; that readers will be <br />
+              &nbsp; &nbsp; &nbsp;distracted readable <br />
+              &nbsp; content of a page when.
+            </p>
+            <div class="order">
+              <button type="submit">PLACE ORDER</button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- about-work ends here -->
+
+    <!-- buck-section start here -->
+    <div class="buck-section" id="Resume">
+     <div class="resu">
+       <h3>RESUME</h3>
+      <h1>EDUCATION & EXPERIENCE</h1>
+     </div>
+      <div class="gurt">
+        <div class="dif">
+          <h2>EDUCATION</h2>
+        </div>
+        <div class="exp-card">
+          <div class="left-block">
+            <h1>2019</h1>
+            <p>
+              National Diploma in <br />
+              Computer Science
+            </p>
+          </div>
+          <div class="right-block">
+            <h1>FEDERAL POLYTECHNIC ILE-OLUJI</h1>
+            <p>
+              It's a long established fact that a <br />
+              reader distracted readable content <br />
+              looking at its layout.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gurt">
+        <div class="dif">
+          <h2>EXPRIENCE</h2>
+        </div>
+        <div class="edu-card">
+          <div class="left-block">
+            <h1>2025</h1>
+            <p>Web Developer</p>
+          </div>
+          <div class="right-block">
+            <h1>WRAP MARKET</h1>
+            <p>
+              It's a long established fact that a <br />
+              reader distracted readable content <br />
+              looking at its layout.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- buck-section ends here -->
+
+    <!-- project-section start here -->
+     <div class="project-section" id="Project">
+       <div class="proj">
+          
+          <h1>PROJECT</h1>
+        </div>
+       <div class="project-container">
+         <div class="project-pro">
+          <nav class="pro pic1"> <img src="images/exp1(1).jpg" alt="">
+         <div class="pics"><button><a href="http://127.0.0.1:5501/index.html"target="_blank"><i class="fa-solid fa-link"></i></a></button></div></nav><br> <br>
+         </div> 
+         <div class="project-pro">
+          <nav class="pro pic2"><img src="images/Exp2(1).jpg" alt=""><div class="pics"><button><a href="http://127.0.0.1:5501/day9/index.html"target="_blank"><i class="fa-solid fa-link"></i></a></button></div></nav><br> <br>
+         </div>
+         <div class="project-pro">
+          <nav class="pro pic3"><img src="images/exp1(1).jpg" alt=""><div class="pics"><button><a href="http://127.0.0.1:5501/blog-details.html"target="_blank"><i class="fa-solid fa-link"></i></a></button></div></nav>
+         </div>
+         
+        
+        </div>
+      </div>
+
+    <!-- project-section ends here -->
+
+    <!-- faq-section start here -->
+    <div class="faqq-section" id="Faq">
+      <div class="faqq-header">
+        <h2>FAQ</h2>
+        <h1>DO YOU HAVE ANY QUESTION?</h1>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header">WHAT IS ONLINE RESUME?</button>
+        <div class="faq-body">
+          <p>
+            An online resume is a web-based version of your traditional resume
+            that can be easily accessed and shared digitally. It allows you to
+            present your professional background, skills, and experience in an
+            interactive and accessible format.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header">HOW TO CHOOSE A BEST RESUME?</button>
+        <div class="faq-body">
+          <p>
+            It is hidden by default, until the collapse plugin adds the
+            appropriate classes that we use to style each element. These classes
+            control the overall appearance, as well as the showing and hiding
+            via CSS transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It's also worth noting that just
+            about.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header">HOW TO MAKE A ONLINE PORTFOLIO?</button>
+        <div class="faq-body">
+          <p>
+            You can create an online portfolio using website builders like
+            WordPress, Wix, or even code it yourself using HTML/CSS/JavaScript.
+            Make sure to include your best projects, a short bio, skills, and
+            contact information.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-header">HOW TO SHOW MY WORK ON PORTFOLIO?</button>
+        <div class="faq-body">
+          <p>
+            Display your work with high-quality visuals or videos. Include
+            project descriptions, your role, the tools you used, and links to
+            live projects or code repositories like GitHub. Ensure your
+            portfolio is responsive and user-friendly.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- faq-section start here -->
+
+    <!-- contact-section start here -->
+    <!-- address -->
+    <div class="contact-section" id="Contact">
+      <div class="contact-header">
+        <h2>HAVE A QUSTION?</h2>
+        <h1>SAY HELLO !</h1>
+      </div>
+      <div class="contact-container">
+        <div class="con-address">
+          <nav class="con-label">
+            <div class="icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="flot f">
+              <h4>ADDRESS</h4>
+              <p>Olofinade Oda-Road,Akure</p>
+            </div>
+          </nav>
+
+          <nav class="con-label">
+            <div class="icon">
+              <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+            <div class="flot l">
+              <h4>PHONE</h4>
+              <p>+2349162292784</p>
+            </div>
+          </nav>
+
+          <nav class="con-label">
+            <div class="icon">
+              <nav class="ice">✉</nav>
+              <!-- <i class="fa-regular fa-envelope"></i> -->
+            </div>
+            <div class="flot o">
+              <h4>EMAIL</h4>
+              <p>
+                Leoemmy007@gmail.com <br />
+                leoemmy007@hotmail.com
+              </p>
+            </div>
+          </nav>
+        </div>
+        <!-- info  -->
+        <div class="contact-info">
+          <nav class="info1">
+            <div class="input1">
+              <input type="text" placeholder=" Name" required />
+            </div>
+
+            <div class="input1">
+              <input type="Email" placeholder="Email " required />
+            </div>
+          </nav>
+          <nav class="info2">
+            <div class="input2">
+              <input
+                id="Message"
+                type="Subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="input3">
+              <textarea name="comment" id="comment" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit">CLICK TO SUBMIT</button>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- contact section ends here -->
+
+    <!-- footer-section  start here -->
+     <div class="footer-section">
+       <div class="footer-container">
+         <div class="copy">
+           <h3>COPYRIGHT &COPY; 2025 | ALL RIGHTS RESERVED.</h3>
+         </div>
+
+         <div class="top">
+           <button><a href="#top">BACK TO TOP &nbsp; <i class="fa-solid fa-arrow-up"></i></a></button>
+         </div>
+         <div class="term">
+           <a href="#top">TERM OF USE</a> <br>
+           <a href="#top">PRIVACY POLICY</a> <br>
+           <a href="#top">COOKIE POLICY</a> <br>
+         </div>
+       </div>
+     </div>
+
+
+    <!-- footer-section ends here -->  
+
+    <!-- javaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
