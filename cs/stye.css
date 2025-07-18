@@ -6,7 +6,7 @@
 
 body {
   line-height: 1.6;
-  background-color: #fdfff5;
+  background-color: #b6ca63;
   font-family: "roboto";
   overflow-x: hidden;
   font-weight: lighter;
@@ -15,7 +15,7 @@ body {
 .header-section .menu-container {
   display: flex;
   margin-left: 30px;
-  background-color: rgba(255, 255, 255, 0.925);
+  background-color: rgba(202, 182, 182, 0.966);
   position: fixed;
   z-index: 1000;
   width: 100%;
@@ -846,7 +846,6 @@ button:focus {
 /* footer-section start here */
 .footer-section {
   margin-top: 50px;
-
   justify-content: space-between;
   height: 60px;
   background-color: white;
@@ -897,6 +896,7 @@ button:focus {
 }
 
 /* footer-section ends here */
+
 /* media query for screen 1024px start here */
 @media screen and (max-width: 1024px) {
   /* hero-section start here */
@@ -1184,7 +1184,8 @@ button:focus {
     background-color: white;
   }
   .footer-container {
-    margin-right: 20px;
+    width: 100%;
+    justify-content: space-between;
   }
   /* footer-section ends here */
 }
@@ -1267,22 +1268,35 @@ button:focus {
   }
   .blok-container {
     margin-left: 5px;
+    flex-wrap: wrap;
+    gap: 20px;
   }
   .block {
-    width: 150px;
+    width: 300px;
   }
   .block .fa-solid {
     justify-items: center;
-    margin-left: 55px;
+    margin-left: 130px;
   }
   /* about-work ends here */
 
   /* buck-section start here */
   .buck-section {
-    margin-left: 310px;
+    margin-left: 210px;
+  }
+  .buck-section .resu h3 {
+    margin-left: 160px;
+  }
+  .buck-section h2 {
+    margin-left: 200px;
+  }
+  .buck-section .resu h1 {
+    font-size: 30px;
+    width: 800px;
+    margin-right: -300px;
   }
   .right-block {
-    width: 400px;
+    width: 300px;
   }
 
   /* buck-section ends here */
@@ -1346,11 +1360,9 @@ button:focus {
   .footer-section {
     margin-top: 100px;
   }
-  .footer-container .top {
-    padding-right: 90px;
-  }
-  .footer-container .term {
-    margin-left: -6px;
+  .footer-container {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 /* media query for screen 425px stop here */
@@ -1431,20 +1443,22 @@ button:focus {
     width: 400px;
   }
   .blok-container {
+    flex-wrap: wrap;
     margin-left: 140px;
+    gap: 20px;
   }
   .block {
-    width: 160px;
+    width: 300px;
   }
   .block .fa-solid {
     justify-items: center;
-    margin-left: 55px;
+    margin-left: 120px;
   }
   /* about-work ends here */
 
   /* buck-section start here */
   .buck-section {
-    margin-left: 330px;
+    margin-left: 300px;
   }
   .buck-section .resu h3 {
     margin-left: 165px;
@@ -1453,6 +1467,9 @@ button:focus {
     font-size: 30px;
     width: 800px;
     margin-right: -220px;
+  }
+  .buck-section h2 {
+    margin-left: 200px;
   }
   .right-block {
     width: 400px;
@@ -1512,13 +1529,14 @@ button:focus {
     margin-left: 60px;
   }
   .contact-info {
-    margin-left: 50px;
+    margin-left: 100px;
   }
   /* contact-section ends here */
 
   /* footer-secion start here */
-  .footer-section {
-    margin-top: 100px;
+  .footer-container {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 /* media query for 375 end here */
@@ -1528,7 +1546,7 @@ button:focus {
   /* hero-section start here */
   .hero-section {
     flex-wrap: wrap;
-    margin-left: 250px;
+    justify-items: center;
   }
   .hero-section p {
     display: flex;
@@ -1557,7 +1575,7 @@ button:focus {
 
   /* about-section start here */
   .about-section {
-    margin-left: 259px;
+    /* justify-content: center; */
     display: block;
   }
   .about-section .head {
@@ -1599,20 +1617,23 @@ button:focus {
     width: 400px;
   }
   .blok-container {
+    flex-wrap: wrap;
+    justify-content: center;
     margin-left: 166px;
   }
   .block {
-    width: 160px;
+    width: 300px;
   }
   .block .fa-solid {
     justify-items: center;
-    margin-left: 55px;
+    margin-left: 120px;
+    gap: 20px;
   }
   /* about-work ends here */
 
   /* buck-section start here */
   .buck-section {
-    margin-left: 350px;
+    margin-left: 320px;
   }
 
   .buck-section .resu h3 {
@@ -1622,6 +1643,9 @@ button:focus {
     font-size: 38px;
     width: 800px;
     margin-right: -200px;
+  }
+  .buck-section h2 {
+    margin-left: 200px;
   }
   .right-block {
     width: 400px;
@@ -1642,7 +1666,7 @@ button:focus {
 
   /* faq-section start here */
   .faqq-section {
-    margin-left: 325px;
+    margin-left: 250px;
   }
   .faqq-header {
     margin-left: -100px;
@@ -1663,7 +1687,7 @@ button:focus {
 
   /* contact-section start here */
   .contact-section {
-    margin-left: 320px;
+    margin-left: 250px;
   }
   .contact-header {
     margin-left: 150px;
@@ -1682,18 +1706,26 @@ button:focus {
   .contact-info {
     margin-left: 95px;
   }
+  .contact-section > .contact-container .contact-info .info1 input {
+    width: 290px;
+  }
+  .contact-section > .contact-container .contact-info .info2 input {
+    width: 600px;
+  }
+  .contact-section > .contact-container .contact-info .info2 textarea {
+    width: 600px;
+  }
   /* contact-section ends here */
 
   /* footer-secion start here */
   .footer-section {
-    margin-top: 100px;
+    width: 100%;
   }
-  .footer-container .top {
-    /* padding-right: 70px; */
+  .footer-container {
+    width: 100%;
+    justify-content: space-between;
   }
-  .footer-container .term {
-    margin-left: 78px;
-  }
+
   /* footer-section ends here */
 
   /* media query for 320px stop here */
