@@ -30,13 +30,17 @@ headers.forEach((header) => {
 //   navMenu.classList.toggle("active");
 //   navLink.classList.toggle("active");
 // }
+// function togglebar() {
+//   const navLinks = document.querySelector(".nav-links");
+//   if (navLinks.style.display === "flex") {
+//     navLinks.style.display = "none";
+//   } else {
+//     navLinks.style.display = "flex";
+//   }
+// }
 function togglebar() {
-  const navLinks = document.querySelector(".nav-links");
-  if (navLinks.style.display === "flex") {
-    navLinks.style.display = "none";
-  } else {
-    navLinks.style.display = "flex";
-  }
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('active');
 }
 
 // media query hamburger-menu ends here
@@ -70,7 +74,7 @@ function showService() {
 function showResume() {
   document.getElementById("About").style.display = "none";
   document.getElementById("Service").style.display = "none";
-  document.getElementById("Resume").style.display = "block";
+  document.getElementById("Resume").style.display = "flex";
   document.getElementById("Project").style.display = "none";
   document.getElementById("Faq").style.display = "none";
   document.getElementById("Contact").style.display = "none";

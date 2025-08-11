@@ -32,8 +32,14 @@
         </h1>
          
         <div class="nav-bar">
-         <div class="nav-menu">
-           <ul class="nav-links">
+          <!-- hambuger menu-icon -->
+         <div class="hamburger-menu" onclick="togglebar()">
+             <i class="fa-solid fa-bars-staggered"></i>
+          </div>
+
+          <!-- end hambuger menu-icon -->
+          <div class="nav-menu">
+           <ul class="nav-links" id="mobile-menu">
             <li><a href="#" class="active" onclick="showHome()">HOME  </a>
             <!-- <ul class="dropdown-menu">
            <li><a href="#" onclick="setLightMode()">LIGHT VERSION</a></li>
@@ -49,8 +55,8 @@
             <li><a href="#" onclick="showContact();">CONTACT</a></li>
            </ul>
            
-          </div>
-             <nav class="nav-link">
+         </div>
+            <nav class="nav-link">
              <ul>
                <li>
                 <a href="facebook.com/David Leo'Emmy" target="_blank"
@@ -75,13 +81,9 @@
               </li>
               </ul>
             </nav>
-         <!-- hambuger menu-icon -->
-         <div class="hamburger-menu" onclick="togglebar()">
-             <i class="fa-solid fa-bars-staggered"></i>
           </div>
-
-           <!-- end hambuger menu-icon -->
         </div>
+        
       </div>
     </div>
     <!-- header-section ends here -->
@@ -386,7 +388,9 @@
             </div>
             <div class="flot l">
               <h4>PHONE</h4>
-              <p>+2349162292784</p>
+             <p>+2349162292784
+              <a href="tel:+2349162292784"></a>
+             </p> 
             </div>
           </nav>
 

@@ -6,7 +6,7 @@
 
 body {
   line-height: 1.6;
-  background-color: #fefcff;
+  background-color: #F8F8FF;
   font-family: "roboto";
   overflow-x: hidden;
   font-weight: lighter;
@@ -45,6 +45,9 @@ body {
 }
 .nav-bar ul li a {
   color: black;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
   text-decoration: none;
 }
 .nav-link ul {
@@ -59,12 +62,17 @@ body {
 .nav-bar .nav-link ul i {
   font-size: 24px;
 }
+.nav-link.active{
+  left: 0;
+  display: block;
+}
 
 .hamburger-menu {
+  font-size: 1.8rem;
   display: none;
   cursor: pointer;
-  background-color: #2d2dff;
-  color: red;
+  z-index: 10000;
+  position: relative;
 }
 /* header-section ends here */
 
@@ -897,16 +905,6 @@ button:focus {
 
 /* footer-section ends here */
 
-/* media query for screen 1024px start here */
-@media screen and (max-width: 1024px) {
-  /* hero-section start here */
-
-  /* hero-section ends here */
-}
-
-/* media query for screen 1024px stop here */
-
-/* media query for screen 768px start here */
 
 /* media query for screen 1024px start here */
 @media screen and (max-width: 1024px) {
