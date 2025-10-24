@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leonardo - Personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <!-- link to custom css -->
+  <link rel="stylesheet" href="cs/styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <div class="header-section">
+    <h1 class="logo">LEO<span>nardo</span></h1>
+    
+    <ul class="nav-lin" id="mobile-menu">
+      <li><a href="#" class="active" onclick="showHome()">HOME</a></li>
+      <li><a href="#" onclick="showAbout()">ABOUT</a></li>
+      <li><a href="#" onclick="showService()">SERVICES</a></li>
+      <li><a href="#" onclick="showResume()">RESUME</a></li>
+      <li><a href="#" onclick="showProject()">PROJECT</a></li>
+      <li><a href="#" onclick="showFaq()">FAQ</a></li>
+      <li><a href="#" onclick="showContact()">CONTACT</a></li>
+    </ul>
+
+    <nav class="nav-link">
+      <ul>
+        <li><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://threads.net" target="_blank"><i class="fa-brands fa-square-threads"></i></a></li>
+        <li class="hamburger-menu" onclick="togglebar()"><i class="fa-solid fa-bars"></i></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero-section">
+    <div class="title-box">
+      <div class="main-title">HELLO!<br>THIS IS<br>LEONARDO</div>
+      <div class="subtitle-wrapper">
+        <div class="subtitle">MODELING</div>
+        <div class="subtitle">WEB DEVELOPER</div>
+      </div>
+      <div class="vd">
+        <button class="btn">DOWNLOAD CV <i class="fa-solid fa-download"></i></button>
+        <div class="vtn">
+          <i class="fa-solid fa-play"></i>
+          <h4>VIDEO TOUR</h4>
+        </div>
+      </div>
+    </div>
+    <div class="pic-box">
+      <div class="a"></div>
+      <div class="p"><img src="images/leo.jpg" alt="Leonardo" /></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="about-section" id="About">
+    <div class="section-header">
+      <h5>PROFILE</h5>
+      <h1>AT A GLANCE</h1>
+    </div>
+    <div class="about-container">
+      <div class="skills-section">
+        <div class="bubble wp"><img src="images/python-removebg-preview.png" alt="Python" /></div>
+        <div class="bubble html">HTML</div>
+        <div class="bubble c">C++</div>
+        <div class="bubble xd">JS</div>
+      </div>
+      <div class="me">
+        <h5>ABOUT ME</h5>
+        <h2>PERSONAL AND DEDICATED FREELANCER LIVES IN ONDO STATE NIGERIA</h2>
+        <p>As a vibrant individual born on August 28, I bring a spark of energy and enthusiasm to everything I do. Hailing from the historic city of Ondo in Ondo State, Nigeria, I am rooted in a rich cultural heritage that values tradition, community, and hard work. My birthdate, nestled in the heart of summer, signifies a personality that is warm, optimistic, and radiant.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="about-work" id="Service">
+    <div class="section-header">
+      <h5>SERVICES</h5>
+      <h1>WHAT I'M DOING</h1>
+    </div>
+    <div class="blok-container">
+      <div class="block">
+        <i class="fa-solid fa-pen-nib"></i>
+        <h3>UI/UX DESIGN</h3>
+        <p>Creating intuitive and engaging user experiences that readers will find captivating and easy to navigate.</p>
+        <div class="order"><button>PLACE ORDER</button></div>
+      </div>
+      <div class="block">
+        <i class="fa-solid fa-box"></i>
+        <h3>ADVERTISING</h3>
+        <p>Strategic advertising solutions that capture attention and deliver results for your brand.</p>
+        <div class="order"><button>PLACE ORDER</button></div>
+      </div>
+      <div class="block">
+        <i class="fa-solid fa-truck-moving"></i>
+        <h3>MARKETING</h3>
+        <p>Comprehensive marketing strategies to help your business reach its full potential.</p>
+        <div class="order"><button>PLACE ORDER</button></div>
+      </div>
+      <div class="block">
+        <i class="fa-solid fa-link"></i>
+        <h3>BRANDING</h3>
+        <p>Building strong brand identities that resonate with your target audience.</p>
+        <div class="order"><button>PLACE ORDER</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME -->
+  <div class="buck-section" id="Resume">
+    <div class="section-header">
+      <h5>RESUME</h5>
+      <h1>EDUCATION & EXPERIENCE</h1>
+    </div>
+    <div class="train">
+      <div class="gurt">
+        <h2>EDUCATION</h2>
+        <div class="edu-card">
+          <div class="left-block">
+            <h1>2019</h1>
+            <p>National Diploma <span>in</span> Computer Science</p>
+          </div>
+          <div class="right-block">
+            <h1>FEDERAL POLYTECHNIC ILE-OLUJI</h1>
+            <p>Completed comprehensive computer science program with focus on software development and systems analysis.</p>
+          </div>
+        </div>
+      </div>
+      <div class="gurt">
+        <h2>EXPERIENCE</h2>
+        <div class="exp-card">
+          <div class="left-block">
+            <h1>2025</h1>
+            <p>Web Developer</p>
+          </div>
+          <div class="right-block">
+            <h1>WRAP MARKET</h1>
+            <p>Developing responsive web applications and creating seamless user experiences for modern businesses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="project-section" id="Project">
+    <div class="section-header">
+      <h5>PORTFOLIO</h5>
+      <h1>MY PROJECTS</h1>
+    </div>
+    <div class="project-container">
+      <div class="project-pro">
+        <div class="pro"><img src="images/exp1(1).jpg" alt="Project 1"></div>
+        <div class="pics"><button><a href="#"><i class="fa-solid fa-link"></i></a></button></div>
+      </div>
+      <div class="project-pro">
+        <div class="pro"><img src="images/Exp2(1).jpg" alt="Project 2"></div>
+        <div class="pics"><button><a href="#"><i class="fa-solid fa-link"></i></a></button></div>
+      </div>
+      <div class="project-pro">
+        <div class="pro"><img src="images/exp1(1).jpg" alt="Project 3"></div>
+        <div class="pics"><button><a href="#"><i class="fa-solid fa-link"></i></a></button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faqq-section" id="Faq">
+    <div class="section-header">
+      <h5>FAQ</h5>
+      <h1>DO YOU HAVE ANY QUESTION?</h1>
+    </div>
+    <div class="faq-item">
+      <button class="faq-header">WHAT IS ONLINE RESUME?</button>
+      <div class="faq-body">
+        <p>An online resume is a web-based version of your traditional resume that can be easily accessed and shared digitally. It allows you to present your professional background, skills, and experience in an interactive and accessible format.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-header">HOW TO CHOOSE A BEST RESUME?</button>
+      <div class="faq-body">
+        <p>Choose a resume that highlights your strengths, uses clear formatting, and is tailored to the job you're applying for. Consider the industry standards and what employers in your field typically expect.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-header">HOW TO MAKE AN ONLINE PORTFOLIO?</button>
+      <div class="faq-body">
+        <p>You can create an online portfolio using website builders like WordPress, Wix, or code it yourself using HTML/CSS/JavaScript. Include your best projects, a short bio, skills, and contact information.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-header">HOW TO SHOW MY WORK ON PORTFOLIO?</button>
+      <div class="faq-body">
+        <p>Display your work with high-quality visuals or videos. Include project descriptions, your role, the tools you used, and links to live projects or code repositories. Ensure your portfolio is responsive and user-friendly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-section" id="Contact">
+    <div class="section-header">
+      <h5>HAVE A QUESTION?</h5>
+      <h1>SAY HELLO!</h1>
+    </div>
+    <div class="contact-container">
+      <div class="con-address">
+        <div class="con-label">
+          <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="flot">
+            <h4>ADDRESS</h4>
+            <p>Olofinade Oda-Road, Akure</p>
+          </div>
+        </div>
+        <div class="con-label">
+          <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <div class="flot">
+            <h4>PHONE</h4>
+            <a href="tel:+2349162292784">09162292784</a>
+          </div>
+        </div>
+        <div class="con-label">
+          <div class="icon"><div class="ice">✉</div></div>
+          <div class="flot">
+            <h4>EMAIL</h4>
+            <a href="mailto:leoemmy007@gmail.com">leoemmy007@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-info">
+        <form>
+          <div class="info1">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="info2">
+            <input type="text" placeholder="Subject" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">CLICK TO SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-section">
+    <div class="footer-container">
+      <div class="copy">
+        <h3>COPYRIGHT © 2025 | ALL RIGHTS RESERVED.</h3>
+      </div>
+      <div class="top">
+        <a href="#top">BACK TO TOP <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+      <div class="term">
+        <a href="#">TERM OF USE</a>
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">COOKIE POLICY</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- custom scrip link here -->
+   <script src="js/script.js"></script>
+</body>
+</html>
