@@ -23,7 +23,7 @@ headers.forEach((header) => {
 });
 // faq accordion end
 
-// contact form message start her
+// Contact form submission start here
 document.getElementById("contactForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -35,21 +35,30 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     message: form.message.value,
   };
 
-  // 🔥 paste your Web App URL below:
+  // ✅ Use your actual deployed Apps Script URL here
   const url =
     "https://script.google.com/macros/s/AKfycbxEmssc2Zvl_B2TuQndoseo4m4kQRi9cLomUvK3yTYvEnqwQuuC3BWuSOGu6Zosk1fH/exec";
 
-  await fetch(url, {
-    method: "POST",
-    mode: "no-cors", // prevents CORS issues
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-  });
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
 
-  alert("Message sent successfully!");
-  form.reset();
+    const result = await response.json();
+    if (result.ok) {
+      alert("✅ Message sent successfully!");
+      form.reset();
+    } else {
+      alert("⚠️ Failed to send message. Please try again later.");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("❌ Error sending message. Check console for details.");
+  }
 });
-// contact form message ends here
+// Contact form submission end here
 
 // Section navigation
 function showHome() {
