@@ -1,3 +1,4 @@
+/** @format */
 
 // Toggle mobile menu
 function togglebar() {
@@ -20,6 +21,35 @@ headers.forEach((header) => {
     }
   });
 });
+// faq accordion end
+
+// contact form message start her
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const payload = {
+    name: form.name.value,
+    email: form.email.value,
+    subject: form.subject.value,
+    message: form.message.value,
+  };
+
+  // 🔥 paste your Web App URL below:
+  const url =
+    "https://script.google.com/macros/s/AKfycbxEmssc2Zvl_B2TuQndoseo4m4kQRi9cLomUvK3yTYvEnqwQuuC3BWuSOGu6Zosk1fH/exec";
+
+  await fetch(url, {
+    method: "POST",
+    mode: "no-cors", // prevents CORS issues
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  alert("Message sent successfully!");
+  form.reset();
+});
+// contact form message ends here
 
 // Section navigation
 function showHome() {
