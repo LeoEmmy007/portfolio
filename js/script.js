@@ -53,6 +53,7 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     alert("⚠️ Something went wrong — check console.");
   }
 });
+
 // Contact form submission end here
 
 // Section navigation
