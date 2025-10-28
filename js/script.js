@@ -114,3 +114,7 @@ function showContact() {
   document.getElementById("Faq").style.display = "none";
   document.getElementById("Contact").style.display = "block";
 }
+
+//date object constructor
+const date = new Date();
+console.log(date);
