@@ -46,7 +46,14 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
       body: JSON.stringify(payload),
     });
 
-    alert("✅ Message sent successfully!");
+    // ✅ SweetAlert success popup
+    Swal.fire({
+      position: "top-center",
+      icon: "success",
+      title: "Message sent successfully!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
     form.reset();
   } catch (error) {
     console.error("❌ Error sending message:", error);
