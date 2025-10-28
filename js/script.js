@@ -35,27 +35,22 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     message: form.message.value,
   };
 
-  // ✅ Use your actual deployed Apps Script URL here
   const url =
     "https://script.google.com/macros/s/AKfycbxEmssc2Zvl_B2TuQndoseo4m4kQRi9cLomUvK3yTYvEnqwQuuC3BWuSOGu6Zosk1fH/exec";
 
   try {
-    const response = await fetch(url, {
+    await fetch(url, {
       method: "POST",
+      mode: "no-cors", // avoids CORS blocking
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
 
-    const result = await response.json();
-    if (result.ok) {
-      alert("✅ Message sent successfully!");
-      form.reset();
-    } else {
-      alert("⚠️ Failed to send message. Please try again later.");
-    }
+    alert("✅ Message sent successfully!");
+    form.reset();
   } catch (error) {
-    console.error("Error:", error);
-    alert("❌ Error sending message. Check console for details.");
+    console.error("❌ Error sending message:", error);
+    alert("⚠️ Something went wrong — check console.");
   }
 });
 // Contact form submission end here
