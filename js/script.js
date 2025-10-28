@@ -23,12 +23,17 @@ headers.forEach((header) => {
 });
 // faq accordion end
 
-// Contact form submission
+// Contact form submission start here
 document.getElementById("contactForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const form = e.target;
-  const formData = new FormData(form);
+  const payload = {
+    name: form.name.value,
+    email: form.email.value,
+    subject: form.subject.value,
+    message: form.message.value,
+  };
 
   const url =
     "https://script.google.com/macros/s/AKfycbxEmssc2Zvl_B2TuQndoseo4m4kQRi9cLomUvK3yTYvEnqwQuuC3BWuSOGu6Zosk1fH/exec";
@@ -36,7 +41,9 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
   try {
     await fetch(url, {
       method: "POST",
-      body: formData,
+      mode: "no-cors", // avoids CORS blocking
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
 
     alert("✅ Message sent successfully!");
@@ -46,6 +53,7 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     alert("⚠️ Something went wrong — check console.");
   }
 });
+// Contact form submission end here
 
 // Section navigation
 function showHome() {
