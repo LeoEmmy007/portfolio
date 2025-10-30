@@ -31,7 +31,7 @@ body {
 #intro-text {
   color: #00f0ff;
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  font-size: 65px;
   text-align: center;
   letter-spacing: 2px;
   opacity: 0;
@@ -39,6 +39,24 @@ body {
   filter: blur(6px);
   animation: textReveal 4s ease forwards 1.5s;
   text-shadow: 0 0 10px #00eaff, 0 0 25px #00eaff;
+}
+
+#intro-text span {
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 90px;
+  text-shadow: rgba(128, 255, 0, 0.527);
+  color: chocolate;
+}
+
+#intro-text .click {
+  color: burlywood;
+  font-size: 30px;
+  font-style: italic;
+  transform: scale(0.4);
+  /* filter: blur(6px); */
+  animation: textReveal 4s ease forwards 1.5s;
+  text-shadow: 0 0 5px #ff2bc2, 0 0 15px #ff2bc2;
 }
 
 /* TEXT APPEAR ANIMATION */
@@ -89,6 +107,7 @@ body {
 }
 
 /* intro stop here */
+
 
 
 /* HEADER */

@@ -6,15 +6,64 @@ window.addEventListener("load", () => {
   const main = document.getElementById("main-content");
   const canvas = document.getElementById("intro-canvas");
   const ctx = canvas.getContext("2d");
-  const audio = document.getElementById("intro-audio");
+  // const audio = document.getElementById("intro-audio");
 
   // === AUDIO HANDLING ===
-  // Starts muted, waits for user click to unmute & play
-  document.body.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.muted = false;
+
+  // 🎵 List all your audio files here
+  const playlist = [
+    "audio/piano 1.mp3",
+    "audio/piano 2.mp3",
+    "audio/piano 3.mp3",
+  ];
+
+  const audio = document.getElementById("intro-audio");
+
+  // === Pick a random track ===
+  function getRandomTrack() {
+    const index = Math.floor(Math.random() * playlist.length);
+    return playlist[index];
+  }
+
+  // === Load and play a random audio file ===
+  function playRandomAudio() {
+    audio.src = getRandomTrack();
+    audio.load(); // ensure it reloads properly
+    audio.muted = false;
+    audio.play().catch((err) => {
+      console.warn("Playback blocked until user interaction:", err);
+    });
+  }
+
+  // === Wait for user click to start playback (required by browser policy) ===
+  document.body.addEventListener(
+    "click",
+    () => {
+      if (audio.paused) {
+        playRandomAudio();
+      }
+    },
+    { once: true } // runs only once
+  );
+
+  // === When one track ends, play another random one ===
+  audio.addEventListener("ended", playRandomAudio);
+
+  // === Automatically pause when tab or window is inactive ===
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      // tab is hidden → pause
+      audio.pause();
+    } else {
+      // tab is active again → resume
       audio.play().catch(() => {});
     }
+  });
+
+  // === Optional: pause and reset if user closes or reloads the page ===
+  window.addEventListener("beforeunload", () => {
+    audio.pause();
+    audio.currentTime = 0;
   });
 
   // === CANVAS SETUP ===
@@ -68,7 +117,7 @@ window.addEventListener("load", () => {
       main.style.display = "block";
       main.style.animation = "showSite 1.5s ease forwards";
     }, 800);
-  }, 6500);
+  }, 8500);
 });
 
 // intro Animation end here
