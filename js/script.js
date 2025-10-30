@@ -1,5 +1,78 @@
 /** @format */
 
+// intro Animation start here
+window.addEventListener("load", () => {
+  const intro = document.getElementById("intro");
+  const main = document.getElementById("main-content");
+  const canvas = document.getElementById("intro-canvas");
+  const ctx = canvas.getContext("2d");
+  const audio = document.getElementById("intro-audio");
+
+  // === AUDIO HANDLING ===
+  // Starts muted, waits for user click to unmute & play
+  document.body.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.muted = false;
+      audio.play().catch(() => {});
+    }
+  });
+
+  // === CANVAS SETUP ===
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  // === PARTICLE ANIMATION ===
+  const particles = [];
+  const numParticles = 120;
+
+  for (let i = 0; i < numParticles; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 2 + 1,
+      dx: (Math.random() - 0.5) * 0.8,
+      dy: (Math.random() - 0.5) * 0.8,
+      color: `hsl(${Math.random() * 360}, 80%, 60%)`,
+    });
+  }
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((p) => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = p.color;
+      ctx.shadowBlur = 10;
+      ctx.fill();
+      p.x += p.dx;
+      p.y += p.dy;
+
+      if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  animateParticles();
+
+  // === INTRO EXIT & SHOW MAIN SITE ===
+  setTimeout(() => {
+    intro.classList.add("fade-out");
+    setTimeout(() => {
+      intro.remove();
+      main.style.display = "block";
+      main.style.animation = "showSite 1.5s ease forwards";
+    }, 800);
+  }, 6500);
+});
+
+// intro Animation end here
+
 // Toggle mobile menu
 function togglebar() {
   const navlist = document.querySelector(".nav-lin");
