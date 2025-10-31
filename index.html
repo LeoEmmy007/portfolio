@@ -21,10 +21,10 @@
   <div id="intro">
     <canvas id="intro-canvas"></canvas>
     <div id="intro-text">This Is <span>LEO</span>, A Website Developer <br> welcome To My Website
-      <div class="click"> Don't forget to make your first click for suprise</div>
+      <!-- <div class="click"> Don't forget to make your first click for suprise</div> -->
     </div>
     <!-- Audio -->
-    <audio id="intro-audio" preload="auto" muted></audio>
+    <!-- <audio id="intro-audio" preload="auto" muted></audio> -->
   </div>
 
 
@@ -64,16 +64,31 @@
           <div class="subtitle">WEB DEVELOPER</div>
         </div>
         <div class="vd">
-          <button class="btn">DOWNLOAD CV <i class="fa-solid fa-download"></i></button>
-          <div class="vtn">
+          <a href="document/" download class="btn">
+            DOWNLOAD CV <i class="fa-solid fa-download"></i>
+          </a>
+          <div class="vtn" id="videoBtn">
             <i class="fa-solid fa-play"></i>
             <h4>VIDEO TOUR</h4>
           </div>
+
+
         </div>
       </div>
       <div class="pic-box">
         <div class="a"></div>
         <div class="p"><img src="images/leo.jpg" alt="Leonardo" /></div>
+      </div>
+    </div>
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <!-- Example: YouTube embed -->
+        <video id="videoFile" width="100%" controls>
+          <source src="videos/portfolio.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
 

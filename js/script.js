@@ -1,5 +1,53 @@
 /** @format */
 
+// === VIDEO MODAL ===
+const videoBtn = document.getElementById("videoBtn");
+const videoModal = document.getElementById("videoModal");
+const closeBtn = document.querySelector(".close");
+const videoFrame = document.getElementById("videoFrame");
+const videoFile = document.getElementById("videoFile");
+
+// === Open Modal ===
+videoBtn.addEventListener("click", () => {
+  videoModal.classList.add("active");
+
+  // ▶️ YouTube iframe
+  if (videoFrame) {
+    const src = videoFrame.src;
+    if (!src.includes("autoplay=1")) {
+      videoFrame.src = src.replace("autoplay=0", "autoplay=1");
+    }
+  }
+
+  // ▶️ Local video
+  if (videoFile) {
+    videoFile.currentTime = 0;
+    videoFile.play().catch(() => {});
+  }
+});
+
+// === Close Modal ===
+function closeModal() {
+  videoModal.classList.remove("active");
+
+  // Stop iframe
+  if (videoFrame) {
+    videoFrame.src = videoFrame.src.replace("autoplay=1", "autoplay=0");
+  }
+
+  // Pause local video
+  if (videoFile) {
+    videoFile.pause();
+  }
+}
+
+closeBtn.addEventListener("click", closeModal);
+
+// Close if user clicks outside
+window.addEventListener("click", (e) => {
+  if (e.target === videoModal) closeModal();
+});
+
 // intro Animation start here
 window.addEventListener("load", () => {
   const intro = document.getElementById("intro");
@@ -8,63 +56,63 @@ window.addEventListener("load", () => {
   const ctx = canvas.getContext("2d");
   // const audio = document.getElementById("intro-audio");
 
-  // === AUDIO HANDLING ===
+  // // === AUDIO HANDLING ===
 
-  // 🎵 List all your audio files here
-  const playlist = [
-    "audio/piano 1.mp3",
-    "audio/piano 2.mp3",
-    "audio/piano 3.mp3",
-  ];
+  // // 🎵 List all your audio files here
+  // const playlist = [
+  //   "audio/piano 1.mp3",
+  //   "audio/piano 2.mp3",
+  //   "audio/piano 3.mp3",
+  // ];
 
-  const audio = document.getElementById("intro-audio");
+  // const audio = document.getElementById("intro-audio");
 
-  // === Pick a random track ===
-  function getRandomTrack() {
-    const index = Math.floor(Math.random() * playlist.length);
-    return playlist[index];
-  }
+  // // === Pick a random track ===
+  // function getRandomTrack() {
+  //   const index = Math.floor(Math.random() * playlist.length);
+  //   return playlist[index];
+  // }
 
-  // === Load and play a random audio file ===
-  function playRandomAudio() {
-    audio.src = getRandomTrack();
-    audio.load(); // ensure it reloads properly
-    audio.muted = false;
-    audio.play().catch((err) => {
-      console.warn("Playback blocked until user interaction:", err);
-    });
-  }
+  // // === Load and play a random audio file ===
+  // function playRandomAudio() {
+  //   audio.src = getRandomTrack();
+  //   audio.load(); // ensure it reloads properly
+  //   audio.muted = false;
+  //   audio.play().catch((err) => {
+  //     console.warn("Playback blocked until user interaction:", err);
+  //   });
+  // }
 
-  // === Wait for user click to start playback (required by browser policy) ===
-  document.body.addEventListener(
-    "click",
-    () => {
-      if (audio.paused) {
-        playRandomAudio();
-      }
-    },
-    { once: true } // runs only once
-  );
+  // // === Wait for user click to start playback (required by browser policy) ===
+  // document.body.addEventListener(
+  //   "click",
+  //   () => {
+  //     if (audio.paused) {
+  //       playRandomAudio();
+  //     }
+  //   },
+  //   { once: true } // runs only once
+  // );
 
-  // === When one track ends, play another random one ===
-  audio.addEventListener("ended", playRandomAudio);
+  // // === When one track ends, play another random one ===
+  // audio.addEventListener("ended", playRandomAudio);
 
-  // === Automatically pause when tab or window is inactive ===
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      // tab is hidden → pause
-      audio.pause();
-    } else {
-      // tab is active again → resume
-      audio.play().catch(() => {});
-    }
-  });
+  // // === Automatically pause when tab or window is inactive ===
+  // document.addEventListener("visibilitychange", () => {
+  //   if (document.hidden) {
+  //     // tab is hidden → pause
+  //     audio.pause();
+  //   } else {
+  //     // tab is active again → resume
+  //     audio.play().catch(() => {});
+  //   }
+  // });
 
-  // === Optional: pause and reset if user closes or reloads the page ===
-  window.addEventListener("beforeunload", () => {
-    audio.pause();
-    audio.currentTime = 0;
-  });
+  // // === Optional: pause and reset if user closes or reloads the page ===
+  // window.addEventListener("beforeunload", () => {
+  //   audio.pause();
+  //   audio.currentTime = 0;
+  // });
 
   // === CANVAS SETUP ===
   function resizeCanvas() {
