@@ -301,22 +301,31 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- footer-section  start here -->
     <div class="footer-section">
       <div class="footer-container">
         <div class="copy">
-          <h3>COPYRIGHT © 2025 | ALL RIGHTS RESERVED.</h3>
+          <h3>COPYRIGHT &COPY; <span id="currentYear"></span> | ALL RIGHTS RESERVED.</h3>
         </div>
+
+
         <div class="top">
-          <a href="#top">BACK TO TOP <i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#top">BACK TO TOP &nbsp; <i class="fa-solid fa-arrow-up"></i></a>
         </div>
         <div class="term">
-          <a href="#">TERM OF USE</a>
-          <a href="#">PRIVACY POLICY</a>
-          <a href="#">COOKIE POLICY</a>
+          <a href="#top">TERM OF USE</a> <br>
+          <a href="#top">PRIVACY POLICY</a> <br>
+          <a href="#top">COOKIE POLICY</a> <br>
         </div>
       </div>
     </div>
+    <script>
+      const yearSpan = document.getElementById("currentYear");
+      yearSpan.textContent = new Date().getUTCFullYear();
+    </script>
+
+
+    <!-- footer-section ends here -->
   </div>
 
   <!-- custom scrip link here -->
